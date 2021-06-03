@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { add, subtract, multiply, divide, mod, intdiv } from '../operations.js';
+import { add, subtract, multiply, divide, mod, intdiv, pythag } from '../operations.js';
 
 const test = QUnit.test;
 
@@ -59,9 +59,9 @@ test('integer division', (expect => {
 }))
 
 test('pythagorean get hypotenuse', (expect) => {
-    const expected = 25;
+    const expected = 5;
 
-    const actual = '';
+    const actual = pythag(3,4);
 
     expect.equal(actual, expected);
 } )

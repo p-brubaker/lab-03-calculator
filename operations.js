@@ -21,3 +21,7 @@ export function mod(x, y) {
 export function intdiv(x, y) {
     return Math.floor(x / y);
 }
+
+export function pythag(a, b) {
+    return (a**2 + b**2)**(1/2);
+}

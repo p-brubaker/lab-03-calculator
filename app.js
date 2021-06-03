@@ -1,5 +1,5 @@
 // import functions
-import { add, subtract, multiply, divide, intdiv } from './operations.js';
+import { add, subtract, multiply, divide, intdiv, pythag } from './operations.js';
 
 // reference needed DOM elements
 const inputAddX = document.getElementById('input-add-x');
@@ -27,6 +27,11 @@ const inputIntdivX = document.getElementById('input-intdiv-x');
 const inputIntdivY = document.getElementById('input-intdiv-y');
 const btnIntdiv = document.getElementById('btn-intdiv');
 const resultIntdiv = document.getElementById('result-intdiv');
+
+const inputPythagX = document.getElementById('input-pythag-x');
+const inputPythagY = document.getElementById('input-pythag-y');
+const btnPythag = document.getElementById('btn-pythag');
+const resultPythag = document.getElementById('result-pythag');
 
 // set event listeners 
 btnAdd.addEventListener('click', () => {
@@ -72,4 +77,13 @@ btnIntdiv.addEventListener('click', () => {
   const result = intdiv(x, y);
 // update DOM to reflect new value(s)
   resultIntdiv.textContent = result;
+})
+
+btnPythag.addEventListener('click', () => {
+  const x = Number(inputPythagX.value);
+  const y = Number(inputPythagY.value);
+// do any needed work with the value(s)
+  const result = pythag(x, y);
+// update DOM to reflect new value(s)
+  resultPythag.textContent = result;
 })
