@@ -33,3 +33,12 @@ footer {
     background-color: #FAF0EA;
     padding: 10px;
 }
+
+.operation {
+    background: lightsteelblue;
+    padding: 12px;
+    border: 1px solid steelblue;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 25px;
+    grid-gap: 10px;
+}
