@@ -1,5 +1,5 @@
 // import functions
-import { add, subtract, multiply } from './operations.js';
+import { add, subtract, multiply, divide, intdiv } from './operations.js';
 
 // reference needed DOM elements
 const inputAddX = document.getElementById('input-add-x');
@@ -16,6 +16,17 @@ const inputMultiplyX = document.getElementById('input-multiply-x');
 const inputMultiplyY = document.getElementById('input-multiply-y');
 const btnMultiply = document.getElementById('btn-multiply');
 const resultMultiply = document.getElementById('result-multiply');
+
+
+const inputDivideX = document.getElementById('input-divide-x');
+const inputDivideY = document.getElementById('input-divide-y');
+const btnDivide = document.getElementById('btn-divide');
+const resultDivide = document.getElementById('result-divide');
+
+const inputIntdivX = document.getElementById('input-intdiv-x');
+const inputIntdivY = document.getElementById('input-intdiv-y');
+const btnIntdiv = document.getElementById('btn-intdiv');
+const resultIntdiv = document.getElementById('result-intdiv');
 
 // set event listeners 
 btnAdd.addEventListener('click', () => {
@@ -45,5 +56,20 @@ btnMultiply.addEventListener('click', () => {
   resultMultiply.textContent = result;
 })
 
-
+btnDivide.addEventListener('click', () => {
+  const x = Number(inputDivideX.value);
+  const y = Number(inputDivideY.value);
+// do any needed work with the value(s)
+  const result = divide(x, y);
+// update DOM to reflect new value(s)
+  resultDivide.textContent = result;
+})
   
+btnIntdiv.addEventListener('click', () => {
+  const x = Number(inputIntdivX.value);
+  const y = Number(inputIntdivY.value);
+// do any needed work with the value(s)
+  const result = intdiv(x, y);
+// update DOM to reflect new value(s)
+  resultIntdiv.textContent = result;
+})
