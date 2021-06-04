@@ -52,3 +52,12 @@ footer {
     grid-template-columns: auto 1fr auto 1fr 25px auto;
     grid-gap: 10px;
 }
+
+.hail {
+    background: lightsteelblue;
+    padding: 12px;
+    border: 1px solid steelblue;
+    display: grid;
+    grid-template-columns: 1fr 25px auto;
+    grid-gap: 10px;
+}

@@ -1,5 +1,5 @@
 // import functions
-import { add, subtract, multiply, divide, intdiv, pythag } from './operations.js';
+import { add, subtract, multiply, divide, intdiv, pythag, hail } from './operations.js';
 
 // reference needed DOM elements
 const inputAddX = document.getElementById('input-add-x');
@@ -32,6 +32,11 @@ const inputPythagX = document.getElementById('input-pythag-x');
 const inputPythagY = document.getElementById('input-pythag-y');
 const btnPythag = document.getElementById('btn-pythag');
 const resultPythag = document.getElementById('result-pythag');
+
+const buttonHail = document.getElementById('hail');
+const resultHail = document.getElementById('result-hail');
+const inputHail = document.getElementById('input-hail');
+
 
 // set event listeners 
 btnAdd.addEventListener('click', () => {
@@ -86,4 +91,13 @@ btnPythag.addEventListener('click', () => {
   const result = pythag(x, y);
 // update DOM to reflect new value(s)
   resultPythag.textContent = result;
+})
+
+
+buttonHail.addEventListener('click', () => {
+  const x = Number(inputHail.value);
+// do any needed work with the value(s)
+  const result = hail(x);
+// update DOM to reflect new value(s)
+  resultHail.textContent = result;
 })

@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { add, subtract, multiply, divide, mod, intdiv, pythag } from '../operations.js';
+import { add, subtract, multiply, divide, mod, intdiv, pythag, hail } from '../operations.js';
 
 const test = QUnit.test;
 
@@ -65,3 +65,11 @@ test('pythagorean get hypotenuse', (expect) => {
 
     expect.equal(actual, expected);
 } )
+
+test('hailstone sequence length', (expect) => {
+    const expected = 949;
+
+    const actual = hail(63728127);
+
+    expect.equal(actual, expected);
+})

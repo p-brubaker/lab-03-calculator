@@ -25,3 +25,19 @@ export function intdiv(x, y) {
 export function pythag(a, b) {
     return (a**2 + b**2)**(1/2);
 }
+
+export function hail(start) {
+
+    let current = BigInt(start);
+    let count = 0;
+  
+    while ( current !== BigInt(1) ) {
+      count += 1;
+      if ( current % BigInt(2) === BigInt(0) ) {
+        current = current / BigInt(2)
+      } else {
+        current = current * BigInt(3) + BigInt(1);
+      }
+    }
+    return(count);
+  }
